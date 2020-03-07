@@ -1,2 +1,2 @@
-recursive-include data/dcm *.dcm
+recursive-include data/ds *.dcm
 recursive-include data/jpg *.*
