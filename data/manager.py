@@ -3,10 +3,11 @@ import os
 
 try:
     from pydicom import dcmread
+    HAS_PYDICOM = True
 except ImportError:
-    pass
+    HAS_PYDICOM = False
 
-from pylibjpeg.data.ds import (
+from data.ds import (
     JPEG2000_IDX, JPEG2000Lossless_IDX, JPEGBaseline_IDX,
     JPEGExtended_IDX, JPEGLossless_IDX, JPEGLosslessSV1_IDX,
     JPEGLS_IDX, JPEGLSLossless_IDX,  LittleEndianExplicit_IDX
