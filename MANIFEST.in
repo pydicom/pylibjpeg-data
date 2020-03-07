@@ -1,0 +1,2 @@
+recursive-include data/ds *.dcm
+recursive-include data/jpg *.*
