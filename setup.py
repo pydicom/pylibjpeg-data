@@ -24,7 +24,7 @@ setup(
     long_description_content_type = 'text/markdown',
     author = "scaramallion",
     author_email = "scaramallion@users.noreply.github.com",
-    url = "https://github.com/scaramallion/pylibjpeg-data",
+    url = "https://github.com/pydicom/pylibjpeg-data",
     license = "MIT",
     keywords = (
         "dicom python medicalimaging radiotherapy oncology pydicom imaging "
@@ -47,5 +47,4 @@ setup(
         "Topic :: Software Development :: Libraries",
     ],
     python_requires = ">=3.6",
-    #install_requires = ["pylibjpeg"],
 )
