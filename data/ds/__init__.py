@@ -7,3 +7,4 @@ from .JPEGLosslessSV1 import INDEX as JPEGLosslessSV1_IDX
 from .JPEGLS import INDEX as JPEGLS_IDX
 from .JPEGLSLossless import INDEX as JPEGLSLossless_IDX
 from .LittleEndianExplicit import INDEX as LittleEndianExplicit_IDX
+from .RLELossless import INDEX as RLELossless_IDX
