@@ -10,7 +10,8 @@ except ImportError:
 from data.ds import (
     JPEG2000_IDX, JPEG2000Lossless_IDX, JPEGBaseline_IDX,
     JPEGExtended_IDX, JPEGLossless_IDX, JPEGLosslessSV1_IDX,
-    JPEGLS_IDX, JPEGLSLossless_IDX,  LittleEndianExplicit_IDX
+    JPEGLS_IDX, JPEGLSLossless_IDX,  LittleEndianExplicit_IDX,
+    RLELossless_IDX
 )
 
 DATA_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -30,6 +31,7 @@ def get_datasets(uid=None, as_dataset=False):
         '1.2.840.10008.1.2.4.81' : 'JPEGLS',
         '1.2.840.10008.1.2.4.90' : 'JPEG2000Lossless',
         '1.2.840.10008.1.2.4.91' : 'JPEG2000',
+        '1.2.840.10008.1.2.5' : 'RLELossless',
     }
     subdir = uids[uid]
     fnames = get_indices('ds')[subdir].keys()
@@ -51,6 +53,7 @@ def get_indexed_datasets(uid):
         '1.2.840.10008.1.2.4.81' : 'JPEGLS',
         '1.2.840.10008.1.2.4.90' : 'JPEG2000Lossless',
         '1.2.840.10008.1.2.4.91' : 'JPEG2000',
+        '1.2.840.10008.1.2.5' : 'RLELossless',
     }
     subdir = uids[uid]
     index = get_indices('ds')[subdir]
@@ -90,4 +93,5 @@ def get_indices(index_type='ds'):
             'JPEGLS' : JPEGLS_IDX,
             'JPEG2000Lossless' : JPEG2000Lossless_IDX,
             'JPEG2000' : JPEG2000_IDX,
+            'RLELossless' : RLELossless_IDX,
         }
