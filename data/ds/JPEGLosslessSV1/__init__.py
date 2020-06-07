@@ -3,6 +3,25 @@ Prediction (Process 14 [Selection Value 1])
 """
 
 INDEX = {
+    '532_JPEGLossless_VOI.dcm' : {
+        'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.70'),
+        'SamplesPerPixel' : ('US', 1),
+        'PhotometricInterpretation' : ('CS', 'MONOCHROME2'),
+        'PlanarConfiguration' : ('US', 0),
+        'NumberOfFrames' : ('IS', '1'),
+        'Rows' : ('US', 2021),
+        'Columns' : ('US', 2021),
+        'BitsAllocated' : ('US', 16),
+        'BitsStored' : ('US', 14),
+        'HighBit' : ('US', 13),
+        'PixelRepresentation' : ('US', 0),
+        'RescaleIntercept' : ('DS', '0'),
+        'RescaleSlope' : ('DS', '1'),
+        'WindowCenter' : ('DS', ['5339', '5339', '5339']),
+        'WindowWidth' : ('DS', ['3368', '2526', '5052']),
+        'ImageComments' : ('LT', 'Contains icon and 3 VOI LUTs'),
+        'RetrieveURI' : ('UR', 'https://github.com/pydicom/pydicom/issues/532'),
+    },
     'JPEG-LL.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.70'),
         'SamplesPerPixel' : ('US', 1),
