@@ -17,6 +17,7 @@ INDEX = {
         'WindowWidth' : ('DS', '100'),
         'RescaleIntercept' : ('DS', '-1024'),
         'RescaleSlope' : ('DS', '1'),
+        'ImageComments' : ('LT', 'Bits Stored should be 14'),
     },
     '966.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
@@ -70,6 +71,7 @@ INDEX = {
         'BitsStored' : ('US', 12),
         'HighBit' : ('US', 11),
         'PixelRepresentation' : ('US', 0),
+        'ImageComments' : ('LT', 'Bits Stored should be 16'),
     },
     'explicit_VR-UN.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
@@ -85,6 +87,23 @@ INDEX = {
         'PixelRepresentation' : ('US', 1),
         'RescaleIntercept' : ('UN', 0x3020),
         'RescaleSlope' : ('UN', 0x3120),
+    },
+    'GDCMJ2K_TextGBR.dcm' : {
+        'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
+        'SamplesPerPixel' : ('US', 3),
+        'PhotometricInterpretation' : ('CS', 'YBR_RCT'),
+        'PlanarConfiguration' : ('US', 0),
+        'NumberOfFrames' : ('IS', '1'),
+        'Rows' : ('US', 400),
+        'Columns' : ('US', 400),
+        'BitsAllocated' : ('US', 8),
+        'BitsStored' : ('US', 8),
+        'HighBit' : ('US', 7),
+        'PixelRepresentation' : ('US', 0),
+        'RetrieveURI' : (
+            'UR',
+            'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
+        ),
     },
     'JPEG2KLossless_1s_1f_u_16_16.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
@@ -102,6 +121,11 @@ INDEX = {
         'WindowWidth' : ('DS', '5310'),
         'RescaleIntercept' : ('DS', '0'),
         'RescaleSlope' : ('DS', '1'),
+        'ImageComments' : ('LT', 'DX_J2K_0Padding.dcm'),
+        'RetrieveURI' : (
+            'UR',
+            'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
+        ),
     },
     'MR2_J2KR.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
@@ -135,6 +159,25 @@ INDEX = {
         'WindowCenter' : ('DS', '600'),
         'WindowWidth' : ('DS', '1600'),
     },
+    'NM_Kakadu44_SOTmarkerincons.dcm' : {
+        'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
+        'SamplesPerPixel' : ('US', 1),
+        'PhotometricInterpretation' : ('CS', 'MONOCHROME2'),
+        'PlanarConfiguration' : ('US', 0),
+        'NumberOfFrames' : ('IS', '1'),
+        'Rows' : ('US', 2500),
+        'Columns' : ('US', 2048),
+        'BitsAllocated' : ('US', 16),
+        'BitsStored' : ('US', 12),
+        'HighBit' : ('US', 11),
+        'PixelRepresentation' : ('US', 0),
+        'WindowCenter' : ('DS', '2048'),
+        'WindowWidth' : ('DS', '4096'),
+        'RetrieveURI' : (
+            'UR',
+            'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
+        ),
+    },
     'RG1_J2KR.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
         'SamplesPerPixel' : ('US', 1),
@@ -164,6 +207,69 @@ INDEX = {
         'PixelRepresentation' : ('US', 0),
         'WindowCenter' : ('DS', '550'),
         'WindowWidth' : ('DS', '1024'),
+    },
+    'TOSHIBA_J2K_OpenJPEGv2Regression.dcm' : {
+        'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
+        'SamplesPerPixel' : ('US', 1),
+        'PhotometricInterpretation' : ('CS', 'MONOCHROME2'),
+        'PlanarConfiguration' : ('US', 0),
+        'NumberOfFrames' : ('IS', '1'),
+        'Rows' : ('US', 512),
+        'Columns' : ('US', 512),
+        'BitsAllocated' : ('US', 16),
+        'BitsStored' : ('US', 16),
+        'HighBit' : ('US', 15),
+        'PixelRepresentation' : ('US', 1),
+        'WindowCenter' : ('DS', '-550'),
+        'WindowWidth' : ('DS', '1600'),
+        'RescaleIntercept' : ('DS', '0'),
+        'RescaleSlope' : ('DS', '1'),
+        'RetrieveURI' : (
+            'UR',
+            'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
+        ),
+    },
+    'TOSHIBA_J2K_SIZ0_PixRep1.dcm' : {
+        'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
+        'SamplesPerPixel' : ('US', 1),
+        'PhotometricInterpretation' : ('CS', 'MONOCHROME2'),
+        'PlanarConfiguration' : ('US', 0),
+        'NumberOfFrames' : ('IS', '1'),
+        'Rows' : ('US', 512),
+        'Columns' : ('US', 512),
+        'BitsAllocated' : ('US', 16),
+        'BitsStored' : ('US', 16),
+        'HighBit' : ('US', 15),
+        'PixelRepresentation' : ('US', 1),
+        'WindowCenter' : ('DS', '350'),
+        'WindowWidth' : ('DS', '2700'),
+        'RescaleIntercept' : ('DS', '0'),
+        'RescaleSlope' : ('DS', '1'),
+        'RetrieveURI' : (
+            'UR',
+            'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
+        ),
+    },
+    'TOSHIBA_J2K_SIZ1_PixRep0.dcm' : {
+        'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
+        'SamplesPerPixel' : ('US', 1),
+        'PhotometricInterpretation' : ('CS', 'MONOCHROME2'),
+        'PlanarConfiguration' : ('US', 0),
+        'NumberOfFrames' : ('IS', '1'),
+        'Rows' : ('US', 512),
+        'Columns' : ('US', 512),
+        'BitsAllocated' : ('US', 16),
+        'BitsStored' : ('US', 16),
+        'HighBit' : ('US', 15),
+        'PixelRepresentation' : ('US', 0),
+        'WindowCenter' : ('DS', '350'),
+        'WindowWidth' : ('DS', '2700'),
+        'RescaleIntercept' : ('DS', '0'),
+        'RescaleSlope' : ('DS', '1'),
+        'RetrieveURI' : (
+            'UR',
+            'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
+        ),
     },
     'US1_J2KR.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
