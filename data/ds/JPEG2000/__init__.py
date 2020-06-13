@@ -106,6 +106,7 @@ INDEX = {
         'WindowWidth' : ('DS', '2228'),
         'RescaleIntercept' : ('DS', '-1024'),
         'RescaleSlope' : ('DS', '1'),
+        'ImageComments' : ('LT', 'Bits Stored should be 11'),
         'RetrieveURI' : (
             'UR',
             'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
