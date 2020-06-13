@@ -245,6 +245,7 @@ INDEX = {
         'WindowWidth' : ('DS', '2700'),
         'RescaleIntercept' : ('DS', '0'),
         'RescaleSlope' : ('DS', '1'),
+        'ImageComments' : ('LT', 'Pixel Representation should be 0'),
         'RetrieveURI' : (
             'UR',
             'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
@@ -266,6 +267,7 @@ INDEX = {
         'WindowWidth' : ('DS', '2700'),
         'RescaleIntercept' : ('DS', '0'),
         'RescaleSlope' : ('DS', '1'),
+        'ImageComments' : ('LT', 'Pixel Representation should be 1'),
         'RetrieveURI' : (
             'UR',
             'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
