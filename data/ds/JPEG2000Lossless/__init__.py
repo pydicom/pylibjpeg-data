@@ -105,6 +105,25 @@ INDEX = {
             'https://sourceforge.net/projects/gdcm/files/gdcmData/gdcmData/'
         ),
     },
+    'J2K_pixelrep_mismatch.dcm' : {
+        'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
+        'SamplesPerPixel' : ('US', 1),
+        'PhotometricInterpretation' : ('CS', 'MONOCHROME2'),
+        'PlanarConfiguration' : ('US', 0),
+        'NumberOfFrames' : ('IS', '1'),
+        'Rows' : ('US', 512),
+        'Columns' : ('US', 512),
+        'BitsAllocated' : ('US', 16),
+        'BitsStored' : ('US', 13),
+        'HighBit' : ('US', 12),
+        'PixelRepresentation' : ('US', 1),
+        'RetrieveURI' : (
+            'UR', 'https://github.com/pydicom/pydicom/issues/1149'
+        ),
+        'ImageComments' : (
+            'LT', 'J2K data is unsigned, Pixel Representation is signed'
+        ),
+    },
     'JPEG2KLossless_1s_1f_u_16_16.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.4.90'),
         'SamplesPerPixel' : ('US', 1),
