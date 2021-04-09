@@ -1,5 +1,5 @@
 
-import os
+from pathlib import Path
 
 try:
     from pydicom import dcmread
@@ -7,6 +7,7 @@ try:
 except ImportError:
     HAS_PYDICOM = False
 
+from data import DICOM_DIRECTORY as DS_DIR
 from data.ds import (
     JPEG2000_IDX, JPEG2000Lossless_IDX, JPEGBaseline_IDX,
     JPEGExtended_IDX, JPEGLossless_IDX, JPEGLosslessSV1_IDX,
@@ -14,29 +15,41 @@ from data.ds import (
     RLELossless_IDX
 )
 
-DATA_DIR = os.path.abspath(os.path.dirname(__file__))
-DS_DIR = os.path.join(DATA_DIR, 'ds')
 
+def get_datasets(uid, as_dataset=False):
+    """Return a list of Path to matching DICOM datasets.
 
-def get_datasets(uid=None, as_dataset=False):
-    """
+    Parameters
+    ----------
+    uid : str
+        The transfer syntax UID of the DICOM datasets.
+    as_dataset : bool, optional
+        If ``True`` return the dataset as a pydicom Dataset object (requires
+        pydicom to be installed), default ``False``.
+
+    Returns
+    -------
+    Union[List[Path], List[Dataset]]
     """
     uids = {
-        '1.2.840.10008.1.2.1' : 'LittleEndianExplicit',
-        '1.2.840.10008.1.2.4.50' : 'JPEGBaseline',
-        '1.2.840.10008.1.2.4.51' : 'JPEGExtended',
-        '1.2.840.10008.1.2.4.57' : 'JPEGLossless',
-        '1.2.840.10008.1.2.4.70' : 'JPEGLosslessSV1',
-        '1.2.840.10008.1.2.4.80' : 'JPEGLSLossless',
-        '1.2.840.10008.1.2.4.81' : 'JPEGLS',
-        '1.2.840.10008.1.2.4.90' : 'JPEG2000Lossless',
-        '1.2.840.10008.1.2.4.91' : 'JPEG2000',
-        '1.2.840.10008.1.2.5' : 'RLELossless',
+        '1.2.840.10008.1.2.1':    'LittleEndianExplicit',
+        '1.2.840.10008.1.2.4.50': 'JPEGBaseline',
+        '1.2.840.10008.1.2.4.51': 'JPEGExtended',
+        '1.2.840.10008.1.2.4.57': 'JPEGLossless',
+        '1.2.840.10008.1.2.4.70': 'JPEGLosslessSV1',
+        '1.2.840.10008.1.2.4.80': 'JPEGLSLossless',
+        '1.2.840.10008.1.2.4.81': 'JPEGLS',
+        '1.2.840.10008.1.2.4.90': 'JPEG2000Lossless',
+        '1.2.840.10008.1.2.4.91': 'JPEG2000',
+        '1.2.840.10008.1.2.5':    'RLELossless',
     }
     subdir = uids[uid]
     fnames = get_indices('ds')[subdir].keys()
-    fpaths = [os.path.join(DS_DIR, subdir, fname) for fname in fnames]
+    fpaths = [DS_DIR / subdir / fname) for fname in fnames]
     if as_dataset:
+        if not HAS_PYDICOM:
+            raise RuntimeError("'as_dataset=True' requires pydicom")
+
         return [dcmread(fpath) for fpath in fpaths]
 
     return fpaths
@@ -59,7 +72,7 @@ def get_indexed_datasets(uid):
     index = get_indices('ds')[subdir]
     fnames = index.keys()
     for fname in fnames:
-        fpath = os.path.join(DS_DIR, subdir, fname)
+        fpath = DS_DIR / subdir / fname
         index[fname]['ds'] = dcmread(fpath)
 
     return index
