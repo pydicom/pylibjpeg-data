@@ -7,13 +7,16 @@ try:
 except ImportError:
     HAS_PYDICOM = False
 
-from data import DICOM_DIRECTORY as DS_DIR
-from data.ds import (
+from ljdata.ds import (
     JPEG2000_IDX, JPEG2000Lossless_IDX, JPEGBaseline_IDX,
     JPEGExtended_IDX, JPEGLossless_IDX, JPEGLosslessSV1_IDX,
     JPEGLS_IDX, JPEGLSLossless_IDX,  LittleEndianExplicit_IDX,
     RLELossless_IDX
 )
+
+DATA_DIRECTORY = Path(__file__).resolve().parent
+DS_DIR = DATA_DIRECTORY / 'ds'
+JPG_DIR = DATA_DIRECTORY / 'jpg'
 
 
 def get_datasets(uid, as_dataset=False):
@@ -45,7 +48,7 @@ def get_datasets(uid, as_dataset=False):
     }
     subdir = uids[uid]
     fnames = get_indices('ds')[subdir].keys()
-    fpaths = [DS_DIR / subdir / fname) for fname in fnames]
+    fpaths = [DS_DIR / subdir / fname for fname in fnames]
     if as_dataset:
         if not HAS_PYDICOM:
             raise RuntimeError("'as_dataset=True' requires pydicom")
