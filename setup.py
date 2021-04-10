@@ -4,7 +4,7 @@ import sys
 
 # Version
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
-VERSION_FILE = os.path.join(BASE_DIR, 'data', '_version.py')
+VERSION_FILE = os.path.join(BASE_DIR, 'ljdata', '_version.py')
 with open(VERSION_FILE) as fp:
     exec(fp.read())
 
@@ -42,6 +42,7 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent",
         "Topic :: Scientific/Engineering :: Medical Science Apps.",
         "Topic :: Software Development :: Libraries",

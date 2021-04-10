@@ -4,4 +4,4 @@ from tempfile import NamedTemporaryFile
 
 import pytest
 
-from data.manager import DATA_DIR
+from ljdata.manager import DATA_DIR
