@@ -13,6 +13,7 @@ INDEX = {
         'BitsStored' : ('US', 12),
         'HighBit' : ('US', 11),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'emri_small.dcm'),
     },
     'MR_small_RLE.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -26,6 +27,7 @@ INDEX = {
         'BitsStored' : ('US', 16),
         'HighBit' : ('US', 15),
         'PixelRepresentation' : ('US', 1),
+        '_matching_dataset': ('LittleEndianExplicit', 'MR_small.dcm'),
     },
     'OBXXXX1A_rle.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -39,6 +41,7 @@ INDEX = {
         'BitsStored' : ('US', 8),
         'HighBit' : ('US', 7),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'OBXXXX1A.dcm'),
     },
     'OBXXXX1A_rle_2frame.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -52,6 +55,7 @@ INDEX = {
         'BitsStored' : ('US', 8),
         'HighBit' : ('US', 7),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'OBXXXX1A_2frame.dcm'),
     },
     'rtdose_rle.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -65,6 +69,7 @@ INDEX = {
         'BitsStored' : ('US', 32),
         'HighBit' : ('US', 31),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianImplicit', 'rtdose.dcm'),
     },
     'rtdose_rle_1frame.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -78,6 +83,7 @@ INDEX = {
         'BitsStored' : ('US', 32),
         'HighBit' : ('US', 31),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianImplicit', 'rtdose_1frame.dcm'),
     },
     'SC_rgb_rle.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -91,6 +97,7 @@ INDEX = {
         'BitsStored' : ('US', 8),
         'HighBit' : ('US', 7),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'SC_rgb.dcm'),
     },
     'SC_rgb_rle_2frame.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -104,6 +111,7 @@ INDEX = {
         'BitsStored' : ('US', 8),
         'HighBit' : ('US', 7),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'SC_rgb_2frame.dcm'),
     },
     'SC_rgb_rle_16bit.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -117,6 +125,7 @@ INDEX = {
         'BitsStored' : ('US', 16),
         'HighBit' : ('US', 15),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'SC_rgb_16bit.dcm'),
     },
     'SC_rgb_rle_16bit_2frame.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -130,6 +139,7 @@ INDEX = {
         'BitsStored' : ('US', 16),
         'HighBit' : ('US', 15),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'SC_rgb_16bit_2frame.dcm'),
     },
     'SC_rgb_rle_32bit.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -143,6 +153,7 @@ INDEX = {
         'BitsStored' : ('US', 32),
         'HighBit' : ('US', 31),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'SC_rgb_32bit.dcm'),
     },
     'SC_rgb_rle_32bit_2frame.dcm' : {
         'TransferSyntaxUID' : ('UI', '1.2.840.10008.1.2.5'),
@@ -156,5 +167,6 @@ INDEX = {
         'BitsStored' : ('US', 32),
         'HighBit' : ('US', 31),
         'PixelRepresentation' : ('US', 0),
+        '_matching_dataset': ('LittleEndianExplicit', 'SC_rgb_32bit_2frame.dcm'),
     },
 }

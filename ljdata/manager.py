@@ -11,7 +11,7 @@ from ljdata.ds import (
     JPEG2000_IDX, JPEG2000Lossless_IDX, JPEGBaseline_IDX,
     JPEGExtended_IDX, JPEGLossless_IDX, JPEGLosslessSV1_IDX,
     JPEGLS_IDX, JPEGLSLossless_IDX,  LittleEndianExplicit_IDX,
-    RLELossless_IDX
+    RLELossless_IDX, LittleEndianImplicit_IDX
 )
 
 DATA_DIRECTORY = Path(__file__).resolve().parent
@@ -35,6 +35,7 @@ def get_datasets(uid, as_dataset=False):
     Union[List[Path], List[Dataset]]
     """
     uids = {
+        '1.2.840.10008.1.2':    'LittleEndianImplicit',
         '1.2.840.10008.1.2.1':    'LittleEndianExplicit',
         '1.2.840.10008.1.2.4.50': 'JPEGBaseline',
         '1.2.840.10008.1.2.4.51': 'JPEGExtended',
@@ -60,6 +61,7 @@ def get_datasets(uid, as_dataset=False):
 
 def get_indexed_datasets(uid):
     uids = {
+        '1.2.840.10008.1.2' : 'LittleEndianImplicit',
         '1.2.840.10008.1.2.1' : 'LittleEndianExplicit',
         '1.2.840.10008.1.2.4.50' : 'JPEGBaseline',
         '1.2.840.10008.1.2.4.51' : 'JPEGExtended',
@@ -100,6 +102,7 @@ def get_indices(index_type='ds'):
     """
     if index_type == 'ds':
         return {
+            'LittleEndianImplicit' : LittleEndianImplicit_IDX,
             'LittleEndianExplicit' : LittleEndianExplicit_IDX,
             'JPEGBaseline' : JPEGBaseline_IDX,
             'JPEGExtended' : JPEGExtended_IDX,
