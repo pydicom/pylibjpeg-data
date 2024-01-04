@@ -1,2 +1,0 @@
-recursive-include ljdata/ds *.dcm
-recursive-include ljdata/jpg *.*

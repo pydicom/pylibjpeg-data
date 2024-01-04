@@ -1,0 +1,35 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+
+[project]
+authors = ["pylibjpeg-data contributors"]
+classifiers=[
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: BSD License",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "Development Status :: 3 - Alpha",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Software Development :: Libraries",
+]
+description = "Optional JPEG and DICOM data used for testing pylibjpeg"
+homepage = "https://github.com/pydicom/pylibjpeg-data"
+keywords = ["dicom pydicom python jpg jpeg jpg-ls jpeg-ls libjpeg pylibjpeg"]
+license = "MIT"
+maintainers = ["scaramallion <scaramallion@users.noreply.github.com>"]
+name = "pylibjpeg-data"
+readme = "README.md"
+requires-python = ">=3.8"
+version = "1.0.0.dev0"
