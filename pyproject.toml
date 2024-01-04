@@ -4,10 +4,11 @@ build-backend = "flit_core.buildapi"
 
 
 [project]
-authors = ["pylibjpeg-data contributors"]
+authors = [
+    {name = "pylibjpeg-data contributors"}
+]
 classifiers=[
     "License :: OSI Approved :: MIT License",
-    "License :: OSI Approved :: BSD License",
     "Intended Audience :: Developers",
     "Intended Audience :: Healthcare Industry",
     "Intended Audience :: Science/Research",
@@ -27,9 +28,8 @@ classifiers=[
 description = "Optional JPEG and DICOM data used for testing pylibjpeg"
 homepage = "https://github.com/pydicom/pylibjpeg-data"
 keywords = ["dicom pydicom python jpg jpeg jpg-ls jpeg-ls libjpeg pylibjpeg"]
-license = "MIT"
-maintainers = ["scaramallion <scaramallion@users.noreply.github.com>"]
-name = "pylibjpeg-data"
+license = {text = "MIT"}
+name = "ljdata"
 readme = "README.md"
 requires-python = ">=3.8"
 version = "1.0.0.dev0"
